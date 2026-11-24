@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DIGITAL EXAM CARD MTsN 1 Kota Pekanbaru</title>
+  <!-- Anda bisa mengganti link href di bawah dengan icon web Anda -->
+  <link rel="icon" href="https://lh3.googleusercontent.com/u/0/d/1I78ilr98BFmzJDP5vwlev-HQv1OuQ6aK" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      overflow: hidden; /* Mencegah scroll ganda */
+    }
+
+    .iframe-container {
+      width: 100%;
+      height: 100dvh; /* Menggunakan dvh agar pas di mobile browser */
+      overflow: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="iframe-container">
+    <iframe
+      id="app"
+      src=""
+      scrolling="yes"
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      allow="fullscreen; camera; microphone; display-capture; geolocation;">
+    </iframe>
+  </div>
+
+  <script>
+    // Base URL dari Google Apps Script (Tanpa parameter)
+    const baseUrl = "https://script.google.com/macros/s/AKfycbyKvLe863zWQWz8QZ81qiCy1Xa_jQ8ulGrOhltYtQcKsCoK3bK_88cKqMsEgeqFr-MK6w/exec";
+    
+    // Menangkap parameter dari URL GitHub Pages (misal: ?page=admin)
+    const urlParams = window.location.search;
+    
+    // Memasukkan URL gabungan ke dalam iframe
+    document.getElementById("app").src = baseUrl + urlParams;
+  </script>
+</body>
+</html>
